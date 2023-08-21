@@ -1,0 +1,14 @@
+
+train: /content/gdrive/MyDrive/do_an_2/datayolov5/images/train
+val: /content/gdrive/MyDrive/do_an_2/datayolov5/images/val
+
+# Classes
+names:
+  0: muncoc
+  1: vaynen
+  2: trungcado
+  3: bachbien
+  4: hacto
+
+ 
+
