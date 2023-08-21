@@ -5,6 +5,7 @@ import json
 import shutil
 import numpy as np
 import streamlit as st
+from streamlit_webrtc import webrtc_streamer
 from PIL import Image
 from pathlib import Path
 
@@ -107,9 +108,10 @@ def main():
             elif choice_way == "Sử dụng webcam":
                 frame_skip = 100
                 st.write("Để dừng mở webcam vui lòng nhấn x trên bàn phím")
-                web_cam = cv2.VideoCapture(0)
-                vid_cod = cv2.VideoWriter_fourcc(*'XVID')
-                output = cv2.VideoWriter("cam_video.mp4", vid_cod, 20.0, (640, 480))
+                webrtc_streamer(key="example")
+                # web_cam = cv2.VideoCapture(0)
+                # vid_cod = cv2.VideoWriter_fourcc(*'XVID')
+                # output = cv2.VideoWriter("cam_video.mp4", vid_cod, 20.0, (640, 480))
 
                 while True:
                     # Capture each frame of webcam video
