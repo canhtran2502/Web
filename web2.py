@@ -110,6 +110,7 @@ def main():
                 st.write("Để dừng mở webcam vui lòng nhấn x trên bàn phím")
                 # webrtc_streamer(key="example")
                 web_cam = cv2.VideoCapture(0)
+                os.system('sudo usermod -a -G video')
                 vid_cod = cv2.VideoWriter_fourcc(*'XVID')
                 output = cv2.VideoWriter("cam_video.mp4", vid_cod, 20.0, (640, 480))
 
